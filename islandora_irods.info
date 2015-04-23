@@ -6,3 +6,4 @@ configure = admin/islandora/tools/irods
 version = 7.x
 core = 7.x
 php = 5.3
+stylesheets[all][] = css/islandora_irods.css
