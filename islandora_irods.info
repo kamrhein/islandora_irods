@@ -1,0 +1,8 @@
+name = Islandora iRODS
+description = "Access to iRODS metadata and files"
+dependencies[] = islandora
+package = Islandora Tools
+configure = admin/islandora/tools/irods
+version = 7.x
+core = 7.x
+php = 5.3
