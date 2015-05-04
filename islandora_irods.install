@@ -2,25 +2,25 @@
 
 /**
  * @file
- * islandora_xml.install
+ * islandora_irods.install
  */
 
 /**
  * Implements hook_install().
  *
- * @see islandora_xml_islandora_required_objects()
+ * @see islandora_irods_islandora_required_objects()
  */
-function islandora_xml_install() {
+function islandora_irods_install() {
   module_load_include('inc', 'islandora', 'includes/solution_packs');
-  islandora_install_solution_pack('islandora_xml');
+  islandora_install_solution_pack('islandora_irods');
 }
 
 /**
  * Implements hook_uninstall().
  */
-function islandora_xml_uninstall() {
+function islandora_irods_uninstall() {
   module_load_include('inc', 'islandora', 'includes/solution_packs');
-  islandora_install_solution_pack('islandora_xml', 'uninstall');
+  islandora_install_solution_pack('islandora_irods', 'uninstall');
   $variables = array(
     'islandora_irods_host',
     'islandora_irods_port',
