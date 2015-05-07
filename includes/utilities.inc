@@ -66,13 +66,6 @@ function islandora_irods_get_data_object_id(AbstractObject $object) {
  */
 function islandora_irods_check_object($id) {
   $output = array();
-  /*
-  $host=variable_get('islandora_irods_host', '');
-  $port=variable_get('islandora_irods_port', '');
-  $user=variable_get('islandora_irods_user', '');
-  $password=variable_get('islandora_irods_password', ''); 
-  $zone=variable_get('islandora_irods_zone', '');
-  */
   $variables=islandora_irods_get_variables();
   $irods_py_path = drupal_get_path('module', 'islandora_irods') . variable_get('islandora_irodsmd_executable_path', '/py/islandorairods.py');
   $command = "python -c \"import imp; iirods = imp.load_source('islandorairods', '$irods_py_path'); iirods.checkForDataObject('$id', '$variables[host]', '$variables[port]', '$variables[user]', '$variables[password]', '$variables[zone]'   )\" ";
