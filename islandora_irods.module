@@ -109,7 +109,10 @@ function islandora_irods_permission() {
  *   otherwise.
  */
 function islandora_irods_access_callback($object) {
-  return islandora_datastream_access(ISLANDORA_VIEW_OBJECTS, $object['RELS-EXT']) && islandora_object_access('access storage', $object) && islandora_irods_irodsresource_exist($object);
+  if ($object) {
+    return islandora_datastream_access(ISLANDORA_VIEW_OBJECTS, $object['RELS-EXT']) && islandora_object_access('access storage', $object) && islandora_irods_irodsresource_exist($object);
+    }
+  return false;
 }
 
 /**
